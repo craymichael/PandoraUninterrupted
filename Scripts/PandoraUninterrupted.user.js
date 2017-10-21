@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Pandora Uninterrupted
 // @namespace    http://github.com/craymichael
-// @version      0.1
+// @version      0.1.1
 // @description  Takes care of "Still Listening" messages.
 // @author       Zach
 // @match        https://www.pandora.com/*
@@ -11,11 +11,10 @@
 (function() {
     'use strict';
 
-    setInterval(function(){
+    setInterval(function() {
         // Check if div exists
-        var sl_div = document.getElementsByClassName("StillListeningBody")[0];
-        if (sl_div !== undefined) {
-            var btn = sl_div.getElementsByClassName("Button")[0];
+        var btn = document.querySelectorAll('[data-qa="keep_listening_button"]')[0];
+        if (btn !== undefined) {
             btn.click();
         }
     }, 500);
