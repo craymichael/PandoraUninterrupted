@@ -2,6 +2,8 @@
 This {tamper,grease}monkey script gets rid of those pesky "Still Listening" messages that interrupt listening. In tandem with an adblocker, an uniterrupted Pandora listening experience is created. This does not prevent sign up popups.
 Working as of May 2017.
 
+__Bonus (05.22.19)__: YouTube uninterrupted script added (for playlists, mixes, etc.)
+
 # Installation
 To install this script, you will need Greasemonkey if you are running Mozilla FireFox, otherwise Tampermonkey for Google Chrome.
 Following, you can acquire the script by cloning the repository using git, otherwise you can download the file through the GitHub interface. Through git you can download using:
