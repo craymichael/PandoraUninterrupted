@@ -16,7 +16,7 @@
         var btn = document.querySelectorAll('ytd-popup-container paper-dialog.ytd-popup-container yt-confirm-dialog-renderer.ytd-popup-container div#main.yt-confirm-dialog-renderer div.buttons.yt-confirm-dialog-renderer yt-button-renderer#confirm-button.yt-confirm-dialog-renderer a.yt-simple-endpoint.yt-button-renderer paper-button#button.yt-button-renderer')[0];
         if (btn !== undefined) {
             btn.click();
-          	btn.remove();
+            btn.remove();
         }
     }, 500);
 })();
