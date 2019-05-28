@@ -24,8 +24,17 @@
             btn.click();
             // Remove popup window
             document.querySelectorAll('ytd-popup-container')[0].remove();
+            
             // Check if video paused, resume if so
-            document.querySelectorAll("ytd-app div#movie_player.paused-mode")[0].click()
+            var playerIntervalID = setInterval(function() {
+                var player = document.querySelectorAll("ytd-app div#movie_player.paused-mode")[0];
+                if (player !== undefined) {
+                    player.click();
+                    clearInterval(playerIntervalID);
+                }
+            }, 50);  // every .05 seconds
+            // Kill interval after 3 seconds if not finished already
+            setTimeout(function() {clearInterval(playerIntervalID);}, 3000);  // after 3 seconds
         }
     }, 500);  // every .5 seconds
 })();
